@@ -26,7 +26,7 @@ function App () {
     <div className='advice'>
       <h4>ADVICE #{randomAdvice.id}</h4>
       <h1>"{randomAdvice.advice}"</h1>
-      <img src={width > 365 ? './images/pattern-divider-desktop.svg' : './public/images/pattern-divider-mobile.svg'} />
+      <img src={width > 365 ? './images/pattern-divider-desktop.svg' : './images/pattern-divider-mobile.svg'} />
       <button onClick={e => {
         e.preventDefault()
         changeAdvice()
