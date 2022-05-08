@@ -3,14 +3,18 @@ import React, { useState, useEffect } from 'react'
 
 function App () {
   const [randomAdvice, setRandomAdvice] = useState(false)
-  const [clicked, setClicked] = useState(false)
+  // const [clicked, setClicked] = useState(false)
   const [width, setWidth] = useState(window.innerWidth)
 
-  useEffect(() => {
-    fetch('https://api.adviceslip.com/advice')
+  const changeAdvice = async () => {
+    await fetch('https://api.adviceslip.com/advice')
       .then(response => response.json())
       .then(data => setRandomAdvice(data.slip))
-  }, [clicked])
+      .catch(err => console.log(err))
+  }
+  useEffect(() => {
+    changeAdvice()
+  }, [])
 
   useEffect(() => {
     const updateWidth = () => setWidth(window.innerWidth)
@@ -22,10 +26,10 @@ function App () {
     <div className='advice'>
       <h4>ADVICE #{randomAdvice.id}</h4>
       <h1>"{randomAdvice.advice}"</h1>
-      <img src={width > 365 ? './images/pattern-divider-desktop.svg' : '../public/images/pattern-divider-mobile.svg'} />
+      <img src={width > 365 ? './images/pattern-divider-desktop.svg' : './public/images/pattern-divider-mobile.svg'} />
       <button onClick={e => {
         e.preventDefault()
-        setClicked(!clicked)
+        changeAdvice()
       }}><img className="dado" src="./images/icon-dice.svg"/></button>
     </div>
   )
