@@ -22,11 +22,11 @@ function App () {
     <div className='advice'>
       <h4>ADVICE #{randomAdvice.id}</h4>
       <h1>"{randomAdvice.advice}"</h1>
-      <img src={width > 365 ? './public/images/pattern-divider-desktop.svg' : '../public/images/pattern-divider-mobile.svg'} />
+      <img src={width > 365 ? './images/pattern-divider-desktop.svg' : '../public/images/pattern-divider-mobile.svg'} />
       <button onClick={e => {
         e.preventDefault()
         setClicked(!clicked)
-      }}><img className="dado" src="./public/images/icon-dice.svg"/></button>
+      }}><img className="dado" src="./images/icon-dice.svg"/></button>
     </div>
   )
 }
