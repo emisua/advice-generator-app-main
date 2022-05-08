@@ -21,8 +21,8 @@ This is a solution to the [Advice generator app challenge on Frontend Mentor](ht
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://6277dc5075651d5f2f7d34cf--majestic-bonbon-503ecd.netlify.app/)
-- Live Site URL: [Add live site URL here](https://6277dc5075651d5f2f7d34cf--majestic-bonbon-503ecd.netlify.app/)
+- Solution URL: [Ir](https://6277dc5075651d5f2f7d34cf--majestic-bonbon-503ecd.netlify.app/)
+- Live Site URL: [Ir](https://6277dc5075651d5f2f7d34cf--majestic-bonbon-503ecd.netlify.app/)
 
 ## My process
 
