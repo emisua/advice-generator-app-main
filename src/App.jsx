@@ -2,7 +2,7 @@ import './App.css'
 import React, { useState, useEffect } from 'react'
 
 function App () {
-  const [randomAdvice, setRandomAdvice] = useState(false)
+  const [randomAdvice, setRandomAdvice] = useState({})
   const [clicked, setClicked] = useState(false)
   const [width, setWidth] = useState(window.innerWidth)
 
@@ -30,7 +30,7 @@ function App () {
       <img src={width > 365 ? './images/pattern-divider-desktop.svg' : './images/pattern-divider-mobile.svg'} />
       <button onClick={e => {
         e.preventDefault()
-        changeAdvice()
+        setClicked(!clicked)
       }}><img className="dado" src="./images/icon-dice.svg"/></button>
     </div>
   )
