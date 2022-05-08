@@ -3,18 +3,19 @@ import React, { useState, useEffect } from 'react'
 
 function App () {
   const [randomAdvice, setRandomAdvice] = useState(false)
-  // const [clicked, setClicked] = useState(false)
+  const [clicked, setClicked] = useState(false)
   const [width, setWidth] = useState(window.innerWidth)
 
-  const changeAdvice = async () => {
-    await fetch('https://api.adviceslip.com/advice')
-      .then(response => response.json())
-      .then(data => setRandomAdvice(data.slip))
-      .catch(err => console.log(err))
-  }
   useEffect(() => {
-    changeAdvice()
-  }, [])
+    const changeAdvice = async () => { // Función asyncrona para recuperar los datos del fetch
+      await fetch('https://api.adviceslip.com/advice', { cache: 'no-cache' })
+        .then(response => response.json())
+        .then(data => setRandomAdvice(data.slip))
+        .catch(err => console.log(err))
+    }
+
+    changeAdvice() // Llamo a la funcion
+  }, [clicked])
 
   useEffect(() => {
     const updateWidth = () => setWidth(window.innerWidth)
