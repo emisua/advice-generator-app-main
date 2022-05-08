@@ -35,5 +35,5 @@ This is a solution to the [Advice generator app challenge on Frontend Mentor](ht
 ## Author
 
 - Website - [Emilio Suárez](https://www.emisua.dev)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/emisua)
+- Frontend Mentor - [@emisua](https://www.frontendmentor.io/profile/emisua)
 - Github - [@emisua](https://github.com/emisua)
